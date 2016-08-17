@@ -1,12 +1,7 @@
 <h3>Latest Posts:</h3>
 <br>
 
-
+{{new-post save2="save3"}}
   {{#each model as |post|}}
-    <ul class="list-group"> <h4>{{post.title}}</h4>
-
-      <li class="list-group-item">by {{post.author}}</li>
-      <li class="list-group-item"><img src= {{post.photo}} alt= {{post.title}}></li>
-      <li class="list-group-item">{{post.body}}</li>
-    </ul>
+    {{post-tile post=post}}
   {{/each}}
