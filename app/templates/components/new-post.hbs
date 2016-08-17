@@ -20,8 +20,8 @@
         <label for="body">Blog Text</label>
         {{input value=body id="body"}}
       </div>
-      <button {{action 'componentSave1'}}>Save</button>
+      <button type="button" class = "btn btn-outline btn-primary" {{action 'componentSave1'}}>Save</button>
     </form>
 {{else}}
-  <button {{action 'postFormShow'}}>New Post</button>
+  <button  type="button" class = "btn btn-outline btn-primary" {{action 'postFormShow'}}>New Post</button>
 {{/if}}
