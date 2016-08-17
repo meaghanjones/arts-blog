@@ -1,5 +1,6 @@
 <ul class="list-group"> <h4>{{post.title}}</h4>
   <button class = 'btn btn-outline btn-danger btn-sm'{{action 'delete' post}}>Delete</button>
+  {{update-post post=post update="update"}}
 
   <li class="list-group-item">by {{post.author}}</li>
   <li class="list-group-item"><img src= {{post.photo}} alt= {{post.title}}></li>
