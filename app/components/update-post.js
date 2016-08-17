@@ -8,8 +8,8 @@ export default Ember.Component.extend({
     },
     update(post){
     var params = {
-      author: this.get('author'),
       title: this.get('title'),
+      author: this.get('author'),
       photo: this.get('photo'),
       body: this.get('body')
     };
