@@ -1,0 +1,12 @@
+{ "posts": [{
+    "title": "New book by really important author",
+    "author": "Mike Smith",
+    "photo": "http://imgc.allpostersimages.com/images/P-473-488-90/27/2759/XD2TD00Z/posters/alfred-eisenstaedt-english-novelist-and-dramatist-w-somerset-maugham-writing-at-desk-in-home.jpg",
+    "body": "One of the world's most foremost novelists has recently released his magnum opus 'The World'. The excitement in the literary world is palpable."
+  }, {
+    "title": "Controversial installation artist Bobby Williams to show at Portland Art Museum",
+    "author": "Sarah Jones",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/1/1c/Francis_Bacon_(artist).jpg",
+    "body": "International art-world darling Bobby Williams will show his recent work consisting of a series of found garbage objects at the Portland art Museum this fall. Local audiences will be challenged to decided whether they think it is really art or not."
+  }]
+}
