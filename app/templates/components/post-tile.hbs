@@ -1,8 +1,9 @@
-<ul class="list-group"> <h4>{{post.title}}</h4>
-  <button class = 'btn btn-outline btn-danger btn-sm'{{action 'delete' post}}>Delete</button>
-  {{update-post post=post update="update"}}
-
+<ul class="list-group"> <h3>{{post.title}}</h3>
   <li class="list-group-item">by {{post.author}}</li>
   <li class="list-group-item"><img src= {{post.photo}} alt= {{post.title}}></li>
   <li class="list-group-item">{{post.body}}</li>
+  <li class="list-group-item">
+    <button class = 'btn btn-outline btn-danger btn-sm'{{action 'delete' post}}>Delete</button>
+    {{update-post class="updatePostComponent" post=post update="update"}}
+  </li>
 </ul>

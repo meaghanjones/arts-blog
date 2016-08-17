@@ -7,6 +7,10 @@ export default Ember.Component.extend({
       this.set('addNewPost', true);
     },
 
+    postFormHide() {
+      this.set('addNewPost', false)
+    },
+
     componentSave1() {
       var params ={
         title: this.get('title'),
@@ -16,7 +20,6 @@ export default Ember.Component.extend({
       };
       this.set('addNewPost', false);
       this.sendAction('save2', params);
-
     }
   }
 });

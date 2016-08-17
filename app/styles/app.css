@@ -36,3 +36,15 @@ img {
 .btn-danger.btn-outline:hover {
     color: #fff;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.updatePostComponent {
+  display: inline;
+}
+
+h3 {
+  padding-top: 15px;
+}

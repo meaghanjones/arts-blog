@@ -21,6 +21,7 @@
         {{input value=body id="body"}}
       </div>
       <button type="button" class = "btn btn-outline btn-primary" {{action 'componentSave1'}}>Save</button>
+      <button type="button" class="btn btn-outline btn-info" {{action 'postFormHide'}}>Hide</button>
     </form>
 {{else}}
   <button  type="button" class = "btn btn-outline btn-primary" {{action 'postFormShow'}}>New Post</button>

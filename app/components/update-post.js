@@ -6,6 +6,11 @@ export default Ember.Component.extend({
     updatePostForm(){
       this.set('updatePostForm', true);
     },
+
+    updateFormHide() {
+      this.set('updatePostForm', false);
+    },
+
     update(post){
     var params = {
       title: this.get('title'),
