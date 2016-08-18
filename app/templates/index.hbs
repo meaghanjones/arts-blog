@@ -8,4 +8,5 @@
 
 {{#each model as |post|}}
   {{post-tile post=post update="update" destroyPost="destroyPost"}}
+  {{new-comment post=post saveComment2="saveComment3"}}
 {{/each}}
