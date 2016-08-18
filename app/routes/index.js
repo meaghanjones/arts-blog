@@ -2,15 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
-    return this.store.findAll('comment');
+    return Ember.RSVP.hash({
+      posts: this.store.findAll('post'),
+      comments: this.store.findAll('comment')
+    });
   },
 
   actions: {
     save3(params) {
       var newPost = this.store.createRecord('post', params);
       newPost.save();
-      this.transistionTo('index');
+      this.transitionTo('index');
     },
 
     update(post, params){
@@ -24,7 +26,12 @@ export default Ember.Route.extend({
     },
 
     destroyPost(post) {
-      post.destroyRecord();
+      var comment_deletions = post.get('comments').map(function(comment){
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(comment_deletions).then(function(){
+        return post.destroyRecord();
+      });
       this.transitionTo('index');
     },
 
@@ -35,6 +42,11 @@ export default Ember.Route.extend({
       newComment.save().then(function() {
         return post.save();
       });
+      this.transitionTo('index');
+    },
+
+    destroyComment(comment) {
+      comment.destroyRecord();
       this.transitionTo('index');
     }
   }

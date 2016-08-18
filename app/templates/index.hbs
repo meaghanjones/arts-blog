@@ -6,10 +6,10 @@
 <h2>Latest Posts:</h2>
 
 
-{{#each model as |post|}}
+{{#each model.posts as |post|}}
   {{post-tile post=post update="update" destroyPost="destroyPost"}}
   {{new-comment post=post saveComment2="saveComment3"}}
   {{#each post.comments as |comment|}}
-    {{comment-tile comment=comment}}
+    {{comment-tile comment=comment destroyComment="destroyComment"}}
   {{/each}}
 {{/each}}

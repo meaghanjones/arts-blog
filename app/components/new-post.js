@@ -20,6 +20,10 @@ export default Ember.Component.extend({
       };
       this.set('addNewPost', false);
       this.sendAction('save2', params);
+      this.set('title', "");
+      this.set('author', "");
+      this.set('photo', "");
+      this.set('body', "");
     }
   }
 });

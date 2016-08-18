@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  // model() {
-  //   return post.comments;
-  // }
+  actions:{
+    delete(comment){
+      if(confirm('Are you sure you want to delete this comment?')){
+        this.sendAction('destroyComment', comment);
+      }
+    }
+  }
 });
