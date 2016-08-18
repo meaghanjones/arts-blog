@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return this.store.findAll('post');
+    return this.store.findAll('comment');
   },
 
   actions: {
@@ -29,7 +30,11 @@ export default Ember.Route.extend({
 
     saveComment3(params) {
       var newComment = this.store.createRecord('comment', params);
-      newComment.save();
+      var post = params.post;
+      post.get('comments').addObject(newComment);
+      newComment.save().then(function() {
+        return post.save();
+      });
       this.transitionTo('index');
     }
   }

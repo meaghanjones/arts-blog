@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     },
 
     postFormHide() {
-      this.set('addNewPost', false)
+      this.set('addNewPost', false);
     },
 
     componentSave1() {
