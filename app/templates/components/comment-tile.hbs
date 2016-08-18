@@ -1,6 +1,6 @@
 <blockquote>
 <p>{{comment.text}}</p>
-<footer>{{comment.username}}</footer>
+<footer>{{comment.username}} {{comment.timestamp}}</footer>
 </blockquote>
 <button class = "btn btn-danger btn-outline btn-sm" {{action 'delete' comment}}>Delete Comment</button>
 {{update-comment class="update-button" comment=comment update="update"}}

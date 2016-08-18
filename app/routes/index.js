@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import moment from 'moment';
+// var now = moment().format();
 
 export default Ember.Route.extend({
   model() {
