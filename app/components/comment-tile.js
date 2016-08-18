@@ -6,6 +6,9 @@ export default Ember.Component.extend({
       if(confirm('Are you sure you want to delete this comment?')){
         this.sendAction('destroyComment', comment);
       }
+    },
+    update(comment, params) {
+      this.sendAction('updateComment', comment, params);
     }
   }
 });

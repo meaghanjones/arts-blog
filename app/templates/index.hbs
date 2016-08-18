@@ -10,6 +10,6 @@
   {{post-tile post=post update="update" destroyPost="destroyPost"}}
   {{new-comment post=post saveComment2="saveComment3"}}
   {{#each post.comments as |comment|}}
-    {{comment-tile comment=comment destroyComment="destroyComment"}}
+    {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
   {{/each}}
 {{/each}}
