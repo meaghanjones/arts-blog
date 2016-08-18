@@ -4,16 +4,16 @@
     <form>
       <div class="form-group">
         <label for="username">Username</label>
-        {{input value=username id="username" placeholder=comment.username}}
+        {{input class="form-control" value=username id="username" placeholder=comment.username}}
       </div>
 
       <div class="form-group">
         <label for="text">Comment</label>
-        {{input value=text id="text" placeholder=comment.text}}
+        {{input class="form-control" value=text id="text" placeholder=comment.text}}
       </div>
-      <button {{action 'update' comment}}>Save</button>
+      <button class="btn btn-success btn-outline btn-sm"{{action 'update' comment}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'updateCommentForm'}}>Update</button>
+  <button class="btn btn-warning btn-outline btn-sm" {{action 'updateCommentForm'}}>Update Comment</button>
 {{/if}}

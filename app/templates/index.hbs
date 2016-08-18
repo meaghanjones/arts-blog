@@ -8,8 +8,15 @@
 
 {{#each model.posts as |post|}}
   {{post-tile post=post update="update" destroyPost="destroyPost"}}
-  {{new-comment post=post saveComment2="saveComment3"}}
+<h4>Comments:</h4>
+<ul class="list-group">
+  <li class="list-group-item">
   {{#each post.comments as |comment|}}
     {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
+    <br>
   {{/each}}
+  </li>
+</ul>
+  <br>
+  {{new-comment post=post saveComment2="saveComment3"}}
 {{/each}}

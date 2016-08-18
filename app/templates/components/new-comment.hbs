@@ -4,17 +4,18 @@
     <form>
       <div class="form-group">
         <label for="username">Username:</label>
-        {{input value=username id="username"}}
+        {{input class="form-control" value=username id="username"}}
       </div>
 
       <div class="form-group">
         <label for="text">Comment:</label>
-        {{input value=text id="text"}}
+        {{input class="form-control" value=text id="text"}}
       </div>
 
-      <button {{action 'saveComment1'}}>Save</button>
+      <button class="btn btn-primary btn-outline btn-sm" {{action 'saveComment1'}}>Save</button>
+      <button type="button" class="btn btn-outline btn-info btn-sm" {{action 'newCommentHide'}}>Hide</button>
     </form>
   </div>
   {{else}}
-  <button {{action 'commentFormShow'}}>Add Comment</button>
+  <button class="btn btn-primary btn-outline btn-sm" {{action 'commentFormShow'}}>Add Comment</button>
 {{/if}}

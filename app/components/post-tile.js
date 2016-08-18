@@ -5,6 +5,7 @@ export default Ember.Component.extend({
     update(post, params) {
       this.sendAction('update', post, params);
     },
+
     delete(post) {
       if (confirm("Are you SURE you want to delete this POST!?")) {
         this.sendAction('destroyPost', post);

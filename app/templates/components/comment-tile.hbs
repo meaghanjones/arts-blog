@@ -1,4 +1,6 @@
-{{comment.username}}
-{{comment.text}}
-{{update-comment comment=comment update="update"}}
-<button {{action 'delete' comment}}>Delete Comment</button>
+<blockquote>
+<p>{{comment.text}}</p>
+<footer>{{comment.username}}</footer>
+</blockquote>
+<button class = "btn btn-danger btn-outline btn-sm" {{action 'delete' comment}}>Delete Comment</button>
+{{update-comment class="update-button" comment=comment update="update"}}

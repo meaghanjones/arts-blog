@@ -7,6 +7,10 @@ export default Ember.Component.extend({
       this.set('addNewComment', true);
     },
 
+    newCommentHide() {
+      this.set('addNewComment', false);
+    },
+
     saveComment1() {
       var params= {
         username: this.get('username'),
