@@ -1,7 +1,8 @@
 # Arts-blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### By _**Meaghan Jones and Matthew, August 2016**_
+
+For this project we set out to practice the Ember concepts and tools we've been exploring this week by beginning a two-day project. The first day's focus lies in getting routing, templates, components and models in place for blog posts; including save, update, delete and find functionality. Day two focuses on implementing a one-to-many relationship between posts and comments. To see an explanation of the project click [here](https://www.learnhowtoprogram.com/javascript/ember-js/blog-day-one)
 
 ## Prerequisites
 
@@ -50,4 +51,11 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+  
+ ### License
+
+*MIT License*
+
+Copyright (c) 2016 **Meaghan Jones**
+
 
